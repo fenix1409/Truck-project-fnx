@@ -1,0 +1,96 @@
+.step-section {
+    padding-bottom: 166px;
+}
+.step__title {
+    @include textStyle($MB:48px, $FS:48px, $FW:600, $CLR:$black-clr, $LH:60px, $CASE:inherit);    
+}
+.step__list {
+    @include Display($items:center, $space:center, $gap:24px);
+    flex-direction: column;
+    margin-bottom: 62px;
+}
+.step__item {
+    width: 1183px;
+    @include Display($items:center, $space:center, $gap:56px);
+    box-shadow: 0px 4px 15px 0px #0000001F;
+    padding: 32px 0;
+    border-radius: 10px;
+}
+.step__content-wrapper {
+    width: 568px;
+}
+.step__subtitle {
+    @include textStyle($MB:24px, $FS:20px, $FW:600, $CLR:$black-clr, $LH:25px, $CASE:inherit);    
+}
+.step__span {
+    display: inline-block;
+    background-color: #FFCE50;
+    margin-bottom: 24px;
+}
+.step__span-img {
+    width: 86px;
+    height: 3px;
+    display: block;
+}
+.step__text {
+    @include textStyle($MB:0px, $FS:16px, $FW:400, $CLR:$text-clr, $LH:24px, $CASE:inherit);    
+}
+.step__video{
+    width: 100%;
+}
+
+
+// tablet 
+@media (max-width:1206px){
+    .step__item{
+        width: 100%;
+    }
+}
+
+@media (max-width:937px){
+    .step-section{
+        padding-bottom: 216px;
+    }
+    .step__title {
+        @include textStyle($MB:48px, $FS:44px, $FW:600, $CLR:$black-clr, $LH:55px, $CASE:inherit);    
+    }
+    .step__list {
+        @include Display($items:center, $space:center, $gap:16px);
+        flex-direction: column;
+        margin-bottom: 125px;
+    }
+    .step__img{
+        display: none;
+    }
+    .step__span {
+        display: inline-block;
+        background-color: #FFCE50;
+        margin-bottom: 24px;
+    }
+    .step__span-img {
+        width: 86px;
+        height: 3px;
+        display: block;
+    }
+}
+// tablet 
+
+
+
+// mobile 
+@media (max-width:648px){
+    .step-section{
+        padding-bottom: 25px;
+    }
+    .step__title{
+        display: none;
+    }
+    .step__list{
+        display: none;
+    }
+    .step__video{
+        margin-bottom: 28px;
+        width: 100%;
+    }
+}
+// mobile 

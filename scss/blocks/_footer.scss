@@ -1,4 +1,102 @@
 .site-footer {
+    padding: 41px 0 21px;
+    background-color: #0B7572;
 }
 .footer {
+    @include Display($items:start, $space:center, $gap:71px);
+    margin-bottom: 35px;
 }
+.footer__logo-link {
+    display: inline-block;
+}
+.footer__logo-img {
+    width: 93px;
+    height: 46px;
+}
+.footer__content-wrapper{
+    @include Display($items:start, $space:center, $gap:74px);
+}
+.footer__list {
+    @include Display($items:start, $space:start, $gap:13px);
+    flex-direction: column;
+}
+.footer__link {
+    @include textStyle($MB:0px, $FS:10px, $FW:500, $CLR:$white-clr, $LH:15px, $CASE:inherit);    
+    letter-spacing: 16%;
+    
+    &:hover{
+        color: #FF9619;
+    }
+}
+.footer__list-model {
+    @include Display($items:start, $space:start, $gap:13px);
+    flex-direction: column;
+}
+.footer__app-wrapper {
+    @include Display($items:start, $space:start, $gap:7px);
+    margin-bottom: 21px;
+}
+.footer__app-link {
+    color: white;
+    cursor: pointer;
+    
+    &:hover{
+        color: #FF9619;
+    }
+}
+.footer__phone-call {
+    display: inline-block;
+    @include textStyle($MB:11px, $FS:10px, $FW:600, $CLR:$white-clr, $LH:15px, $CASE:inherit);  
+    margin-bottom: 11px;  
+
+    &:hover{
+        color: #FF9619;
+    }
+}
+.footer__btn {
+    display: inline-block;
+    @include buttonStyle($BTN_W:143px, $BTN_PY:3px, $BTN_BG_CLR:#FF9619,$BTN_BR_Radius:none, $BTN_Border_CLR:none,$BTN_FS:7px,$BTN_FW:600, $BTN_LH:17px, $BTN_CLR:$white-clr,$BTN_CASE:inherit);
+    @include Display($items:start, $space:start, $gap:19px); 
+    
+    &:active{
+        opacity: 50%;
+    }
+}
+.footer__subtitle{
+    display: block;
+    @include textStyle($MB:0px, $FS:10px, $FW:600, $CLR:$white-clr, $LH:15px, $CASE:inherit); 
+    letter-spacing: 4px;
+    text-align: center; 
+}
+
+
+
+// tablet
+@media (max-width:850px){
+    .site-footer{
+        padding: 30px 0 21px;
+    }    
+}
+
+@media (max-width:656px){
+   .footer{
+    display: table;     
+    margin: 0 auto;      
+    flex-direction: column;
+    margin-bottom: 16px;
+   }
+   .footer__phone-call {
+    display: inline-block;
+    margin-top: 63px;
+    @include textStyle($MB:23px, $FS:10px, $FW:600, $CLR:$white-clr, $LH:15px, $CASE:inherit);  
+    margin-bottom: 11px;  
+}
+.footer__btn {
+    display: inline-block;
+    margin: 0 auto;
+    @include buttonStyle($BTN_W:100%, $BTN_PY:3px, $BTN_BG_CLR:#FF9619,$BTN_BR_Radius:none, $BTN_Border_CLR:none,$BTN_FS:7px,$BTN_FW:600, $BTN_LH:17px, $BTN_CLR:$white-clr,$BTN_CASE:inherit);
+    @include Display($items:center, $space:center, $gap:19px);    
+    text-align: center;
+}
+}
+// tablet
